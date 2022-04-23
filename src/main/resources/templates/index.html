@@ -2,11 +2,20 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Top Page</title>
 </head>
 <body>
 
 <p th:text="${message}"></p>
+
+<table>
+<tr th:each=" user : ${userList}">
+    <td th:text="${user.id}"></td>
+    <td th:text="${user.name}"></td>
+    <td th:text="${user.age}"></td>
+</tr>
+
+</table>
 
 </body>
 </html>
